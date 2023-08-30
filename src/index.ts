@@ -28,12 +28,7 @@ const main = async () => {
       consola.success(`Lesson ${item.videoTitle} log finished.`)
       consola.info('Waiting...')
       for (let n = 0; n < 6; n++) {
-        await sleep(30 * 1000)
-        if (await useCheck(conf, course, item)) {
-          consola.success(`Finished ${item.videoTitle}.`)
-          break
-        }
-        consola.info('Still waiting...')
+        await sleep(60 * 1000)
       }
     } catch {
       break
